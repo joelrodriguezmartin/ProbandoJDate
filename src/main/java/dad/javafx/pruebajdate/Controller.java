@@ -50,9 +50,8 @@ public class Controller implements Initializable {
 
 private void initializeAction() {
 	LocalDate now = LocalDate.now();
-	dateChooser.getMonthCombo().getSelectionModel().select(now.getMonthValue()-1);
-	dateChooser.getDayCombo().getSelectionModel().select(now.getDayOfMonth()-1);
-	dateChooser.getYearCombo().getSelectionModel().select(0);
+	dateChooser.setDateProperty(now);
+
 }
 
 public BorderPane getRoot() {
